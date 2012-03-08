@@ -1,0 +1,14 @@
+Feature: hitting
+    In order to increase chances of winning
+    A player may ask for a "hit", which will cause the dealer
+    to provide him an additional card, which will add to his score.
+
+  Scenario: A player hits once     # features/hit.feature:6
+    Given the table has one player # blackjack.cpp:60
+    And the player has 2 cards     # blackjack.cpp:66
+    When the player asks for a hit # blackjack.cpp:75
+    Then the player has 3 cards    # blackjack.cpp:82
+
+1 scenario (1 passed)
+4 steps (4 passed)
+0m0.719s
