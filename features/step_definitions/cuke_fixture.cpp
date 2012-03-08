@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <cukebins/wireserver.hpp>
-#include "blackjack.cpp"
+#include "blackjack.h"
 #include <cukebins/wireserver.hpp>
 
 struct Context {
