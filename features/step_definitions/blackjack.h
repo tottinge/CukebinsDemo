@@ -11,8 +11,6 @@ class Player {
         std::vector<string> cards;
 };
 
-
-
 class Table {
     public:
         ~Table();
@@ -22,5 +20,4 @@ class Table {
     private:
         std::vector<Player*> players;
 };
-
 

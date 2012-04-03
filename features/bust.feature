@@ -4,5 +4,4 @@ Feature: going bust
     Or a player has more than 21 points
     He is considered "bust", which means he loses.
 
-
     Scenario:

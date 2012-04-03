@@ -6,7 +6,6 @@ struct Context {
     Table table;
 };
 
-
 GIVEN("^the table has 1 player$") {
     USING_CONTEXT(Context, context);
     context->table.addPlayer(new Player());
@@ -27,11 +26,9 @@ WHEN("^the player asks for a hit$") {
     table.hit(0);
 }
 
-
 THEN("^the player has 3 cards$") {
     USING_CONTEXT(Context, context);
     Player& player = context->table.getPlayer(0);
     ASSERT_EQ(3, player.cardCount());
 }
-
 
