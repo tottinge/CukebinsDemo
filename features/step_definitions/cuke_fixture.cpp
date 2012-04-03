@@ -7,11 +7,10 @@ struct Context {
 };
 
 
-GIVEN("^the table has one player$") {
+GIVEN("^the table has 1 player$") {
     USING_CONTEXT(Context, context);
     context->table.addPlayer(new Player());
 }
-
 
 GIVEN("^the player has 2 cards$") {
     USING_CONTEXT(Context, context);
