@@ -1,5 +1,4 @@
 #include <gtest/gtest.h>
-#include <cukebins/wireserver.hpp>
 #include "blackjack.h"
 #include <cukebins/wireserver.hpp>
 

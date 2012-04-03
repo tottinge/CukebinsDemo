@@ -1,8 +1,8 @@
+@wip
 Feature: deal a blackjack hand
     In order to start a game of blackjack
     Each player should receive two cards
 
-    @ignore
     Scenario: One player
         Given the table has one player
         When the dealer deals cards
@@ -10,7 +10,6 @@ Feature: deal a blackjack hand
         And the dealer has 2 cards
         And the deck is short 4 cards
 
-    @ignore
     Scenario: five players
         Given the table has five player
         When the dealer deals cards
@@ -24,6 +23,4 @@ Feature: deal a blackjack hand
             |  4     |   2   |
             |  5     |   2   |
         And the deck is short 12 cards
-
-
 

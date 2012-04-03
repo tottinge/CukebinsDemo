@@ -10,7 +10,7 @@ compile() {
 
 run_cuke(){     
     ./features/step_definitions/blackjack_steps &      
-    cucumber --tags=~@ignore  
+    cucumber ${*:-"--tags=~@wip --tags=~@ignore"}
 }
 
 go() {
