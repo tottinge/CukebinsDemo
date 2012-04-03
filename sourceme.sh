@@ -12,7 +12,7 @@ run_cuke(){
     args=${*:-'--tags=~@wip --tags=~@ignore'}
     echo "Args: $args" >&2
     ./features/step_definitions/blackjack_steps &      
-    cucumber ${args}
+    cucumber ${args} 
 }
 
 go() {
