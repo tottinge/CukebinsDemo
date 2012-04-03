@@ -4,15 +4,13 @@
 
 using namespace std;
 
-
 void Player::receiveCard(std::string card) { 
     cards.push_back(card);
 }
+
 int Player::cardCount() { 
     return cards.size(); 
 };
-
-
 
 Table::~Table() {
     for(int i=0; i< players.size(); ++i) {
