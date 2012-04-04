@@ -1,45 +1,33 @@
 #include <vector>
 #include <string>
+#include "blackjack.h"
 
 using namespace std;
 
-class Player {
-    public:
-        void receiveCard(std::string card) { 
-            cards.push_back(card);
-        }
-        int cardCount() { 
-            return cards.size(); 
-        };
-    private:
-        std::vector<string> cards;
+void Player::receiveCard(std::string card) { 
+    cards.push_back(card);
+}
+
+int Player::cardCount() { 
+    return cards.size(); 
 };
 
+Table::~Table() {
+    for(int i=0; i< players.size(); ++i) {
+        delete players[i];
+    }
+}
 
+void Table::addPlayer(Player* player){
+    players.push_back(player);
+}
 
-class Table {
-    public:
-        ~Table() {
-            for(int i=0; i< players.size(); ++i) {
-                delete players[i];
-            }
-        }
+Player& Table::getPlayer(int player){
+    return *players[player];
+}
 
-        void addPlayer(Player* player){
-            players.push_back(player);
-        }
-
-        Player& getPlayer(int player){
-            return *players[player];
-        }
-
-        void hit(int playerNumber) {
-            Player& player = getPlayer(playerNumber);
-            player.receiveCard("Ace spades");
-        }
-
-    private:
-        std::vector<Player*> players;
-};
-
+void Table::hit(int playerNumber) {
+    Player& player = getPlayer(playerNumber);
+    player.receiveCard("Ace spades");
+}
 
